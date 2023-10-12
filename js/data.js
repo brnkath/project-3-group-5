@@ -1,0 +1,66 @@
+// An array of locations
+let restaurants = [
+  {
+    name: "CRAFT Coral Gables",
+    category: "American",
+    rating: 4.5,
+    Address: "127 Giralda Ave Coral Gables, FL 33134",
+    location: [25.75151, -80.25758],
+  },
+  {
+    name: "Steak Brasil Churrascaria",
+    category: "Brazilian",
+    rating: 4.2,
+    Address: "190 SE 1st Ave Miami, FL 33131",
+    location: [25.77262, -80.1919],
+  },
+  {
+    name: "Cajun Boil",
+    category: "Cajun/Creole",
+    rating: 4.7,
+    Address: "10162 W Flagler St Miami, FL 33174",
+    location: [25.76787, -80.36049],
+  },
+  {
+    name: "Jamaica Kitchen",
+    category: "Caribbean",
+    rating: 4.4,
+    Address: "8736 SW 72nd St Miami, FL 33173",
+    location: [25.70218, -80.33495],
+  },
+  {
+    name: "Old's Havana Cuban Bar & Cocina",
+    category: "Cuban",
+    rating: 4.4,
+    Address: "1442 SW 8th St Miami, FL 33135",
+    location: [25.764931, -80.246986],
+  },
+  {
+    name: "Bouchon Bistro",
+    category: "French",
+    rating: 4.8,
+    Address: "2101 Galiano St Miami, FL 33134",
+    location: [25.7528, -80.25676],
+  },
+  {
+    name: "Fratellino",
+    category: "Italian",
+    rating: 4.8,
+    Address: "264 Miracle Mile Coral Gables, FL 33134",
+    location: [25.74916, -80.26012],
+  },
+  {
+    name: "Don Maguey Mexican Restaurant",
+    category: "Mexican",
+    rating: 4.9,
+    Address: "4747 W Flagler St Miami, FL 33134",
+    location: [25.77175, -80.27248],
+  },
+  {
+    name: "Bunbury",
+    category: "Steakhouses",
+    rating: 4.6,
+    Address: "55 NE 14th St Miami, FL 33132",
+    location: [25.78847, -80.19338],
+  },
+];

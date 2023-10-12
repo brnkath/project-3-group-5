@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Group 5 - Project 3</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin="" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <div
+      class="p-5 text-center bg-image"
+      style="
+        background-image: url('img/miami-3.jpg');
+        height: 100vh;
+        background-size: cover;
+      "
+    >
+      <div class="mask" style="background-color: rgba(0, 0, 0, 0.7)">
+        <div class="d-flex p-5 justify-content-center align-items-center h-100">
+          <div class="text-white">
+            <h1 class="mb-3">Group 5 - Project 3</h1>
+            <h5 class="mb-4">Restaurants - Miami, Florida</h5>
+            <a
+              class="btn btn-outline-light btn-lg m-2 apiLink"
+              href="#"
+              role="button"
+              >API Links</a
+            >
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              id="modalBtn"
+              class="btn btn-outline-light btn-lg m-2"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+            >
+              Map of Restaurants
+            </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="staticBackdrop"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              tabindex="-1"
+              aria-labelledby="staticBackdropLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5
+                      class="modal-title"
+                      id="staticBackdropLabel"
+                      style="color: black"
+                    >
+                      Map of Miami, Florida restaurants
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div id="map"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="apiInfo mt-3">
+              <!-- Tab links - courtesy of w3schools-->
+              <div class="tab">
+                <button class="tablinks" onclick="openCat(event, 'all')">
+                  All Restaurants
+                </button>
+                <button class="tablinks" onclick="openCat(event, 'topTen')">
+                  Top 10 Restaurants
+                </button>
+                <button class="tablinks" onclick="openCat(event, 'byCat')">
+                  Restaurants By Category
+                </button>
+              </div>
+
+              <!-- Tab content -->
+              <div style="text-align: left" id="all" class="tabcontent">
+                <h3>All Restaurants</h3>
+                <hr />
+                <h5>Access all restaurant locations from the dataset</h5>
+                <p><a href="#" target="_blank">/all</a></p>
+              </div>
+
+              <div style="text-align: left" id="topTen" class="tabcontent">
+                <h3>Top 10 Restaurants</h3>
+                <hr />
+                <h5>Access the top ten restaurant locations</h5>
+                <p><a href="#" target="_blank">/top-ten</a></p>
+              </div>
+              <div style="text-align: left" id="byCat" class="tabcontent">
+                <h3>Restaurants By Category</h3>
+                <hr />
+                <h5>Access restaurants by category</h5>
+                <p>
+                  Categories: <a href="#" target="_blank">American</a>, <a href="#" target="_blank"><a href="#" target="_blank">Brazilian</a>, <a href="#" target="_blank">Cajun/Creole</a>, <a href="#" target="_blank">Caribbean</a>,
+                  <a href="#" target="_blank">Cuban</a>, <a href="#" target="_blank">French</a>, <a href="#" target="_blank">Italian</a>, <a href="#" target="_blank">Mexican</a>, <a href="#" target="_blank">Steakhouses</a>
+                </p>
+                <p><a href="#" target="_blank">/category/?</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery  -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Leaflet JavaScript code -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+  crossorigin=""></script>
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/map.js"></script>
+  </body>
+</html>
