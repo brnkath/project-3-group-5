@@ -13,7 +13,6 @@
 // }
 
 // // Add the restaurant markers to a new layer
-
 // let streetMap = L.tileLayer(
 //   "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
 //   {
@@ -62,7 +61,7 @@
 
 // L.control.layers(baseMaps, overlayMaps).addTo(myMap);
 
-// Make map only show after clicking modal button
+// // Make map only show after clicking modal button
 // const modalBtn = document.getElementById("modalBtn");
 // const mapShow = document.getElementById("map");
 
