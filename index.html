@@ -13,9 +13,12 @@
       crossorigin="anonymous"
     />
     <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-  crossorigin="" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="icon" href="img/favicon.png" type="image/png" />
@@ -46,19 +49,19 @@
               id="modalBtn"
               class="btn btn-outline-light btn-lg m-2"
               data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
+              data-bs-target="#staticBackdrop1"
             >
-              Map of Restaurants
+              Map of Restaurant and Supermarket Locations
             </button>
 
             <!-- Modal -->
             <div
               class="modal fade"
-              id="staticBackdrop"
+              id="staticBackdrop1"
               data-bs-backdrop="static"
               data-bs-keyboard="false"
               tabindex="-1"
-              aria-labelledby="staticBackdropLabel"
+              aria-labelledby="staticBackdropLabel1"
               aria-hidden="true"
             >
               <div class="modal-dialog modal-dialog-centered modal-fullscreen">
@@ -66,10 +69,10 @@
                   <div class="modal-header">
                     <h5
                       class="modal-title"
-                      id="staticBackdropLabel"
+                      id="staticBackdropLabel1"
                       style="color: black"
                     >
-                      Map of Miami, Florida restaurants
+                      Map of Miami, Florida Restaurants and Supermarkets
                     </h5>
                     <button
                       type="button"
@@ -80,6 +83,50 @@
                   </div>
                   <div class="modal-body">
                     <div id="map"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Button trigger modal -->
+            <button
+              type="button"
+              id="modalBtn"
+              class="btn btn-outline-light btn-lg m-2"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop2"
+            >
+              Economic Data
+            </button>
+
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="staticBackdrop2"
+              data-bs-backdrop="static"
+              data-bs-keyboard="false"
+              tabindex="-1"
+              aria-labelledby="staticBackdropLabel2"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5
+                      class="modal-title"
+                      id="staticBackdropLabel2"
+                      style="color: black"
+                    >
+                      Economic Data
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <div id="plots"></div>
                   </div>
                 </div>
               </div>
@@ -99,26 +146,41 @@
               </div>
 
               <!-- Tab content -->
-              <div style="text-align: left" id="all" class="tabcontent">
+              <div
+                style="text-align: left"
+                id="all"
+                class="tabcontent"
+              >
                 <h3>All Locations</h3>
                 <hr />
-                <h5>Access all restaurant and super market locations from the dataset</h5>
-                <p><a href="#" target="_blank">/all</a></p>
+                <h5>
+                  Access all restaurant and supermarket locations from the
+                  dataset
+                </h5>
+                <p">
+                  <a href="#" target="_blank">/all</a>
+                </p>
               </div>
               <div style="text-align: left" id="byCat" class="tabcontent">
                 <h3>Locations By Category</h3>
                 <hr />
                 <h5>Access locations by category</h5>
                 <p>
-                  Categories: <a href="#" target="_blank">Restaurants only</a>, <a href="#" target="_blank"><a href="#" target="_blank">Fast food only</a>, <a href="#" target="_blank">Super markets</a>
+                  Categories: <a href="#" target="_blank">Restaurants only</a>,
+                  <a href="#" target="_blank">Fast food only</a>,
+                  <a href="#" target="_blank">Supermarkets</a>
                 </p>
-                <p><a href="#" target="_blank">/category/?</a></p>
+                <p>
+                  <a href="#" target="_blank">/category/?</a>
+                </p>
               </div>
-              <div style="text-align: left" id="topTen" class="tabcontent">
-                <h3>Economic data</h3>
+              <div style="text-align: left" id="economic" class="tabcontent">
+                <h3>Economic Data</h3>
                 <hr />
-                <h5>Access the top ten restaurant locations</h5>
-                <p><a href="#" target="_blank">/top-ten</a></p>
+                <h5>Economic Data</h5>
+                <p>
+                  <a href="#" target="_blank">/economic</a>
+                </p>
               </div>
             </div>
           </div>
@@ -138,9 +200,11 @@
       crossorigin="anonymous"
     ></script>
     <!-- Leaflet JavaScript code -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-  crossorigin=""></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
     <!-- Custom JS -->
     <script src="js/scripts.js"></script>
     <script src="js/data.js"></script>
