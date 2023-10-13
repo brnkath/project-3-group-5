@@ -33,7 +33,7 @@
         <div class="d-flex p-5 justify-content-center align-items-center h-100">
           <div class="text-white">
             <h1 class="mb-3">Group 5 - Project 3</h1>
-            <h5 class="mb-4">Restaurants - Miami, Florida</h5>
+            <h5 class="mb-4">Foud Deserts in Miami, Florida</h5>
             <a
               class="btn btn-outline-light btn-lg m-2 apiLink"
               href="#"
@@ -88,39 +88,37 @@
               <!-- Tab links - courtesy of w3schools-->
               <div class="tab">
                 <button class="tablinks" onclick="openCat(event, 'all')">
-                  All Restaurants
-                </button>
-                <button class="tablinks" onclick="openCat(event, 'topTen')">
-                  Top 10 Restaurants
+                  All Locations
                 </button>
                 <button class="tablinks" onclick="openCat(event, 'byCat')">
-                  Restaurants By Category
+                  Locations By Category
+                </button>
+                <button class="tablinks" onclick="openCat(event, 'economic')">
+                  Economic data
                 </button>
               </div>
 
               <!-- Tab content -->
               <div style="text-align: left" id="all" class="tabcontent">
-                <h3>All Restaurants</h3>
+                <h3>All Locations</h3>
                 <hr />
-                <h5>Access all restaurant locations from the dataset</h5>
+                <h5>Access all restaurant and super market locations from the dataset</h5>
                 <p><a href="#" target="_blank">/all</a></p>
               </div>
-
+              <div style="text-align: left" id="byCat" class="tabcontent">
+                <h3>Locations By Category</h3>
+                <hr />
+                <h5>Access locations by category</h5>
+                <p>
+                  Categories: <a href="#" target="_blank">Restaurants only</a>, <a href="#" target="_blank"><a href="#" target="_blank">Fast food only</a>, <a href="#" target="_blank">Super markets</a>
+                </p>
+                <p><a href="#" target="_blank">/category/?</a></p>
+              </div>
               <div style="text-align: left" id="topTen" class="tabcontent">
-                <h3>Top 10 Restaurants</h3>
+                <h3>Economic data</h3>
                 <hr />
                 <h5>Access the top ten restaurant locations</h5>
                 <p><a href="#" target="_blank">/top-ten</a></p>
-              </div>
-              <div style="text-align: left" id="byCat" class="tabcontent">
-                <h3>Restaurants By Category</h3>
-                <hr />
-                <h5>Access restaurants by category</h5>
-                <p>
-                  Categories: <a href="#" target="_blank">American</a>, <a href="#" target="_blank"><a href="#" target="_blank">Brazilian</a>, <a href="#" target="_blank">Cajun/Creole</a>, <a href="#" target="_blank">Caribbean</a>,
-                  <a href="#" target="_blank">Cuban</a>, <a href="#" target="_blank">French</a>, <a href="#" target="_blank">Italian</a>, <a href="#" target="_blank">Mexican</a>, <a href="#" target="_blank">Steakhouses</a>
-                </p>
-                <p><a href="#" target="_blank">/category/?</a></p>
               </div>
             </div>
           </div>
