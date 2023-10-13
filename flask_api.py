@@ -8,7 +8,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 
-from flask import Flask, jsonify
+from flask import Flask, render_template, jsonify, redirect, url_for
 
 
 #################################################
@@ -36,9 +36,10 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def welcome():
+def index():
     """List all available api routes."""
     return f"Available Routes:<br/>" f"/api/v1.0/names<br/>" f"/api/v1.0/passengers"
+    return render_template("index.html", index=index)
 
 
 @app.route("/api/v1.0/names")
