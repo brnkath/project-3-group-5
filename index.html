@@ -19,8 +19,36 @@
       integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
       crossorigin=""
     />
+
+    <!-- Marker Cluster CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"
+    />
+
+    <!-- Leaflet JavaScript code -->
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <!-- Marker Cluster JavaScript -->
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/1594df2c90.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
+
     <link rel="icon" href="img/favicon.png" type="image/png" />
   </head>
   <body>
@@ -39,10 +67,12 @@
             <h5 class="mb-4">Food Deserts in Miami, Florida</h5>
             <a
               class="btn btn-outline-light btn-lg m-2 apiLink"
+              id="button"
               href="#"
               role="button"
               >API Links</a
             >
+
             <!-- Button trigger modal -->
             <button
               type="button"
@@ -51,7 +81,7 @@
               data-bs-toggle="modal"
               data-bs-target="#staticBackdrop1"
             >
-              Map of Restaurant and Supermarket Locations
+              Map of Locations
             </button>
 
             <!-- Modal -->
@@ -90,12 +120,12 @@
             <!-- Button trigger modal -->
             <button
               type="button"
-              id="modalBtn"
+              id="modalBtn2"
               class="btn btn-outline-light btn-lg m-2"
               data-bs-toggle="modal"
               data-bs-target="#staticBackdrop2"
             >
-              Economic Data
+              Income Data
             </button>
 
             <!-- Modal -->
@@ -141,7 +171,7 @@
                   Locations By Category
                 </button>
                 <button class="tablinks" onclick="openCat(event, 'economic')">
-                  Economic data
+                  Income Data
                 </button>
               </div>
 
@@ -166,22 +196,25 @@
                   <a href="#" target="_blank">Fast food only</a>,
                   <a href="#" target="_blank">Supermarkets</a>
                 </p>
-                <p>
-                  <a href="#" target="_blank">/category/?</a>
-                </p>
               </div>
               <div style="text-align: left" id="economic" class="tabcontent">
-                <h3>Economic Data</h3>
+                <h3>Income Data</h3>
                 <hr />
-                <h5>Economic Data</h5>
+                <h5>Access income data by zipcode</h5>
                 <p>
-                  <a href="#" target="_blank">/economic</a>
+                  <a href="#" target="_blank">/Income data</a>
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <footer id="foot">
+        Background image courtesy of
+        <a href="https://pixabay.com/service/license-summary/" target="_blank"
+          >pixabay.com</a
+        >
+      </footer>
     </div>
     <!-- jQuery  -->
     <script
@@ -195,15 +228,10 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <!-- Leaflet JavaScript code -->
-    <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
-    ></script>
     <!-- Custom JS -->
     <script src="js/scripts.js"></script>
-    <script src="js/data.js"></script>
+    <!-- D3 Library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="js/map.js"></script>
   </body>
 </html>

@@ -1,4 +1,7 @@
-body {
+/* Set map, body, and html to 100% of the screen size. */
+#map,
+body,
+html {
   height: 100%;
 }
 
@@ -42,4 +45,74 @@ body {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+}
+
+/* Leaflet map markers */
+.custom-marker .fas {
+  font-size: 24px;
+}
+
+/* Adjust modal styles for Leaflet components */
+#staticBackdrop1 .leaflet-control-layers,
+#staticBackdrop1 .legend {
+  z-index: 1000; /* Ensure Leaflet components are above modal backdrop */
+}
+
+/* Override Leaflet styles for legend and layer controls */
+.leaflet-control-layers,
+.leaflet-control-layers-expanded {
+  background-color: white; /* Set background color for layer controls */
+  color: black; /* Set text color for layer controls */
+  text-align: left; /* Align text left within the controls */
+}
+
+/* Adjust position of checkboxes */
+.leaflet-control-layers-list input[type="checkbox"] {
+  margin-right: 8px; /* Add some space between checkbox and text */
+}
+
+/* CSS for the legend */
+.legend {
+  background-color: white;
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+/* Additional CSS for legend icons and text */
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  color: black; /* Set text color for legend items */
+}
+
+.legend-icon {
+  margin-right: 10px; /* Adjust the margin between icon and text */
+  width: 20px; /* Set a fixed width for all icons */
+  text-align: center; /* Center the icon */
+}
+
+/* Ensure legend text is visible */
+.legend-text {
+  white-space: nowrap;
+  color: black; /* Set text color for legend text */
+}
+
+/* Ensure legend title is visible */
+.legend h6 {
+  color: black; /* Set text color for legend title */
+  margin-bottom: 10px; /* Add space below the legend title */
+}
+
+#foot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-weight: bold;
+}
+
+#foot a {
+  text-decoration: none;
+  color: #ddd;
 }

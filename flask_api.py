@@ -1,5 +1,3 @@
-# Module 10 - Activities 4 through 10
-
 # Dependencies
 import numpy as np
 
@@ -22,7 +20,7 @@ Base = automap_base()
 Base.prepare(autoload_with=engine)
 
 # Save reference to the table
-Passenger = Base.classes.passenger
+Passenger = Base.classes.locations
 
 #################################################
 # Flask Setup
