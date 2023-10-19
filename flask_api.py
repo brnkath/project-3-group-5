@@ -37,13 +37,7 @@ app = Flask(__name__)
 # Can the routes have spaces?
 @app.route("/")
 def index():
-    """List all available api routes."""
-    return( 
-        f"Available Routes:<br/>" 
-        f"/api/v1.0/All Locations<br/>" 
-        f"/api/v1.0/Locations By Category<br/>"
-        f"/api/v1.0/Income Data<br/>"
-    return render_template("index.html", index=index))
+    return render_template("index.html", index=index)
 
 
 @app.route("/api/v1.0/All Locations")
@@ -53,8 +47,7 @@ def locations():
 
     """Return a list of all passenger names"""
     # Query all restaurant names, addresses, and categories
-    results = session.query(Restaurants.Name, Restaurants.Address, Restaurants.Category)\
-        .order_by(Restaurants.name.asc()).all()
+    results = session.query(Restaurants).order_by(Restaurants.name.asc()).all()
 
     session.close()
 
@@ -64,8 +57,8 @@ def locations():
     return jsonify(all_names)
 
 
-@app.route("/api/v1.0/Locations By Category<br/>")
-def location_category():
+@app.route("/api/v1.0/restaurants")
+def restaurants():
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
@@ -74,28 +67,43 @@ def location_category():
         .filter(Restaurants.category == 'Restaurants')\
         .order_by(Restaurants.name.asc()).all()
 
+    session.close()
+    
+    all_names = list(np.ravel(restaurants))
+
+    return jsonify(all_names)
+
+@app.route("/api/v1.0/fast_food")
+def restaurants():
+    # Create our session (link) from Python to the DB
+    session = Session(engine)
+
+    # Query all restaurants
     fast_food = session.query(Restaurants.Name, Restaurants.Address, Restaurants.Category)\
         .filter(Restaurants.category == 'Fast Food')\
         .order_by(Restaurants.name.asc()).all()
+    
+    session.close()
+    
+    all_names = list(np.ravel(fast_food))
 
+    return jsonify(all_names)
+
+@app.route("/api/v1.0/supermarkets")
+def restaurants():
+    # Create our session (link) from Python to the DB
+    session = Session(engine)
+
+    # Query all restaurants
     grocery_stores = session.query(Restaurants.Name, Restaurants.Address, Restaurants.Category)\
         .filter(Restaurants.category == 'Grocery Store')\
         .order_by(Restaurants.name.asc()).all()
 
     session.close()
 
-    # Select cetegory
+    all_names = list(np.ravel(grocery_stores))
 
-
-    # Return the data from the appropriate category
-    if RESTAURANT:
-        return jsonify(restaurants)
-    
-    if FASTFOOD:
-        return jsonify(fast_food)
-    
-    if GROCERY:
-        return jsonify(grocery_stores)
+    return jsonify(all_names)
 
 @app.route("/api/v1.0/Income Data<br/>")
 def zip_income():
