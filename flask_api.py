@@ -12,8 +12,8 @@ from flask import Flask, render_template, jsonify, redirect, url_for
 #################################################
 # Database Setup
 #################################################
-engine = create_engine("sqlite:///miami.sqlite",
-                       connect_args={'check_same_thread': False})
+engine = create_engine('sqlite:///miami.sqlite')
+                    #connect_args={'check_same_thread': False})
 
 # reflect an existing database into a new model
 Base = automap_base()
@@ -21,8 +21,8 @@ Base = automap_base()
 Base.prepare(autoload_with=engine)
 
 # Save reference to the table
-Zip_income = Base.classes.zip_income
-Restaurants = Base.classes.restauants
+# Zip_income = Base.classes.zip_income
+Restaurants = Base.classes.restaurants
 
 #################################################
 # Flask Setup
@@ -37,10 +37,10 @@ app = Flask(__name__)
 # Can the routes have spaces?
 @app.route("/")
 def index():
-    return render_template("index.html", index=index)
+    return render_template("templates/index.html", index=index)
 
 
-@app.route("/api/v1.0/All Locations")
+@app.route("/api/v1.0/all_locations")
 def locations():
     # Create our session (link) from Python to the DB
     session = Session(engine)
@@ -63,18 +63,18 @@ def restaurants():
     session = Session(engine)
 
     # Query all restaurants
-    restaurants = session.query(Restaurants.Name, Restaurants.Address, Restaurants.Category)\
+    results = session.query(Restaurants.Name, Restaurants.Address, Restaurants.Category)\
         .filter(Restaurants.category == 'Restaurants')\
         .order_by(Restaurants.name.asc()).all()
 
     session.close()
     
-    all_names = list(np.ravel(restaurants))
+    all_names = list(np.ravel(results))
 
     return jsonify(all_names)
 
 @app.route("/api/v1.0/fast_food")
-def restaurants():
+def fast_food():
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
@@ -90,7 +90,7 @@ def restaurants():
     return jsonify(all_names)
 
 @app.route("/api/v1.0/supermarkets")
-def restaurants():
+def supermarkets():
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
@@ -105,8 +105,8 @@ def restaurants():
 
     return jsonify(all_names)
 
-@app.route("/api/v1.0/Income Data<br/>")
-def zip_income():
+@app.route("/api/v1.0/income_data")
+def income_data():
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
@@ -115,7 +115,7 @@ def zip_income():
     
     session.close()
 
-    # Convert list of tuples into normal list
+    # Convert list of tuples into a normal list
     income = list(np.ravel(results))
 
     return jsonify(income)
