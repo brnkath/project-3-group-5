@@ -105,6 +105,40 @@ html {
   margin-bottom: 10px; /* Add space below the legend title */
 }
 
+/* Add background color and padding to income legend */
+.incomeLegend {
+  background-color: white; /* Set background color */
+  padding: 10px; /* Add padding */
+  text-align: center; /* Center-align text */
+  border: 1px solid black; /* Add border for better separation */
+  color: black; /* Set text color */
+}
+
+/* Style the legend title */
+.incomeLegend h6 {
+  color: black; /* Set text color for legend title */
+  margin-bottom: 10px; /* Add space below the legend title */
+}
+
+/* Style legend items */
+.incomeLegendItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+/* Style legend colors */
+.incomeLegendColor {
+  width: 20px; /* Set a fixed width for color indicators */
+  height: 20px; /* Set a fixed height for color indicators */
+  margin-right: 10px; /* Adjust the margin between color indicator and text */
+}
+
+/* Style legend text */
+.incomeLegendText {
+  white-space: nowrap;
+}
+
 #foot {
   position: absolute;
   bottom: 0;

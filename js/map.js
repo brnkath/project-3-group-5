@@ -165,31 +165,106 @@ $(document).ready(function () {
           );
         }
       });
+      // Declare colorScale variable in the global scope
+      let colorScale;
+      // Create a promise for loading the income data
+      let incomePromise = new Promise(function (resolve, reject) {
+        d3.json("resources/filtered_zipcodes.geojson").then(function (geojson) {
+          let incomeRange = d3.extent(geojson.features, function (d) {
+            return parseInt(
+              d.properties.median_income.replace("$", "").replace(",", "")
+            );
+          });
+          colorScale = d3
+            .scaleQuantize()
+            .domain(incomeRange)
+            .range([
+              "#f7f4f9",
+              "#e0ebf2",
+              "#bfd3e6",
+              "#9ebcda",
+              "#8c96c6",
+              "#8c6bb1",
+              "#88419d",
+              "#6e016b",
+            ]);
+          let incomeLayer = L.geoJson(geojson, {
+            style: function (feature) {
+              let income = parseInt(
+                feature.properties.median_income
+                  .replace("$", "")
+                  .replace(",", "")
+              );
+              return {
+                fillColor: colorScale(income),
+                weight: 1,
+                opacity: 1,
+                color: "white",
+                fillOpacity: 0.8,
+              };
+            },
+            onEachFeature: function (feature, layer) {
+              layer.bindPopup(
+                `<strong>Zipcode: </strong> ${feature.properties.ZCTA5CE10}<br><strong>Median Income: </strong> ${feature.properties.median_income}`
+              );
+            },
+          }).addTo(myMap);
+          resolve(incomeLayer);
+        });
+      });
 
-      // Create a new layer for all locations with marker clusters
-      let allLocationsClusterLayer = L.layerGroup([
-        restaurantCluster,
-        fastFoodCluster,
-        supermarketCluster,
-      ]);
+      // Wait for the incomeLayer promise to resolve
+      incomePromise.then(function (incomeLayer) {
+        // Create a new layer for all locations with marker clusters
+        let allLocationsClusterLayer = L.layerGroup([
+          restaurantCluster,
+          fastFoodCluster,
+          supermarketCluster,
+        ]);
 
-      // Add layers to the map with different colors
-      let baseLayers = {
-        "Street Map": streetMap,
-      };
+        // Add layers to the map with different colors
+        let baseLayers = {
+          "Street Map": streetMap,
+        };
 
-      let overlayLayers = {
-        Restaurants: restaurantLayer.addTo(myMap),
-        "Fast Food": fastFoodLayer.addTo(myMap),
-        Supermarkets: supermarketLayer.addTo(myMap),
-        "All Locations Cluster": allLocationsClusterLayer,
-      };
+        let overlayLayers = {
+          Restaurants: restaurantLayer.addTo(myMap),
+          "Fast Food": fastFoodLayer.addTo(myMap),
+          Supermarkets: supermarketLayer.addTo(myMap),
+          "All Locations Cluster": allLocationsClusterLayer,
+          "Income Level": incomeLayer.addTo(myMap),
+        };
 
-      L.control
-        .layers(baseLayers, overlayLayers, {
-          collapsed: false,
-        })
-        .addTo(myMap);
+        L.control
+          .layers(baseLayers, overlayLayers, {
+            collapsed: false,
+          })
+          .addTo(myMap);
+
+        const legendColors = colorScale.range();
+
+        const incomeLegend = L.control({ position: "bottomright" });
+
+        incomeLegend.onAdd = function (map) {
+          let div = L.DomUtil.create("div", "incomeLegend");
+          div.innerHTML += "<h6>Median Income</h6>";
+          for (let i = 0; i < legendColors.length; i++) {
+            const legendItem = L.DomUtil.create("div", "incomeLegendItem", div);
+            const lowerBound = colorScale
+              .invertExtent(legendColors[i])[0]
+              .toLocaleString();
+            const upperBound = colorScale
+              .invertExtent(legendColors[i])[1]
+              .toLocaleString();
+            legendItem.innerHTML =
+              `<div class="incomeLegendColor" style="background:${legendColors[i]}"></div>` +
+              `<span class="incomeLegendText">$${lowerBound} - $${upperBound}</span><br>`;
+          }
+          return div;
+        };
+
+        incomeLegend.addTo(myMap);
+      });
 
       // Define FontAwesome icons and their colors
       const legendIcons = {
@@ -228,6 +303,9 @@ $(document).ready(function () {
         }
         return div;
       };
+
+      // Add the legend control to the map
+      legend.addTo(myMap);
 
       // Add the legend control to the map
       legend.addTo(myMap);
