@@ -45,7 +45,8 @@
       src="https://kit.fontawesome.com/1594df2c90.js"
       crossorigin="anonymous"
     ></script>
-
+    <!-- Plotly JS -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
 
@@ -125,7 +126,7 @@
               data-bs-toggle="modal"
               data-bs-target="#staticBackdrop2"
             >
-              Income Data
+              Data Visualizations
             </button>
 
             <!-- Modal -->
@@ -146,7 +147,7 @@
                       id="staticBackdropLabel2"
                       style="color: black"
                     >
-                      Economic Data
+                      Data Visualizations
                     </h5>
                     <button
                       type="button"
@@ -156,7 +157,8 @@
                     ></button>
                   </div>
                   <div class="modal-body">
-                    <div id="plots"></div>
+                    <div id="bar-graph"></div>
+                    <div id="pie-chart"></div>
                   </div>
                 </div>
               </div>
@@ -184,7 +186,7 @@
                   dataset
                 </h5>
                 <p>
-                  <a href="#" target="_blank">/all</a>
+                  <a href="/api/v1.0/all_locations" target="_blank">/all</a>
                 </p>
               </div>
               <div style="text-align: left" id="byCat" class="tabcontent">
@@ -192,9 +194,16 @@
                 <hr />
                 <h5>Access locations by category</h5>
                 <p>
-                  Categories: <a href="#" target="_blank">Restaurants only</a>,
-                  <a href="#" target="_blank">Fast food only</a>,
-                  <a href="#" target="_blank">Supermarkets</a>
+                  Categories:
+                  <a href="/api/v1.0/restaurants" target="_blank"
+                    >Restaurants only</a
+                  >,
+                  <a href="/api/v1.0/fast_food" target="_blank"
+                    >Fast food only</a
+                  >,
+                  <a href="/api/v1.0/supermarkets" target="_blank"
+                    >Supermarkets</a
+                  >
                 </p>
               </div>
               <div style="text-align: left" id="economic" class="tabcontent">
@@ -202,7 +211,9 @@
                 <hr />
                 <h5>Access income data by zipcode</h5>
                 <p>
-                  <a href="#" target="_blank">/Income data</a>
+                  <a href="/api/v1.0/income_data" target="_blank"
+                    >/Income data</a
+                  >
                 </p>
               </div>
             </div>
@@ -232,6 +243,8 @@
     <script src="js/scripts.js"></script>
     <!-- D3 Library -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Map and Plotly JS files -->
     <script src="js/map.js"></script>
+    <script src="js/plotly.js"></script>
   </body>
 </html>

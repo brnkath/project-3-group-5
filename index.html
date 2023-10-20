@@ -186,7 +186,7 @@
                   dataset
                 </h5>
                 <p>
-                  <a href="#" target="_blank">/all</a>
+                  <a href="/api/v1.0/all_locations" target="_blank">/all</a>
                 </p>
               </div>
               <div style="text-align: left" id="byCat" class="tabcontent">
@@ -194,9 +194,16 @@
                 <hr />
                 <h5>Access locations by category</h5>
                 <p>
-                  Categories: <a href="#" target="_blank">Restaurants only</a>,
-                  <a href="#" target="_blank">Fast food only</a>,
-                  <a href="#" target="_blank">Supermarkets</a>
+                  Categories:
+                  <a href="/api/v1.0/restaurants" target="_blank"
+                    >Restaurants only</a
+                  >,
+                  <a href="/api/v1.0/fast_food" target="_blank"
+                    >Fast food only</a
+                  >,
+                  <a href="/api/v1.0/supermarkets" target="_blank"
+                    >Supermarkets</a
+                  >
                 </p>
               </div>
               <div style="text-align: left" id="economic" class="tabcontent">
@@ -204,7 +211,9 @@
                 <hr />
                 <h5>Access income data by zipcode</h5>
                 <p>
-                  <a href="#" target="_blank">/Income data</a>
+                  <a href="/api/v1.0/income_data" target="_blank"
+                    >/Income data</a
+                  >
                 </p>
               </div>
             </div>
@@ -236,6 +245,6 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Map and Plotly JS files -->
     <script src="js/map.js"></script>
-    <script src="js/Plotly.js"></script>
+    <script src="js/plotly.js"></script>
   </body>
 </html>
