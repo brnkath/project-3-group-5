@@ -45,7 +45,8 @@
       src="https://kit.fontawesome.com/1594df2c90.js"
       crossorigin="anonymous"
     ></script>
-
+    <!-- Plotly JS -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css" />
 
@@ -125,7 +126,7 @@
               data-bs-toggle="modal"
               data-bs-target="#staticBackdrop2"
             >
-              Income Data
+              Data Visualizations
             </button>
 
             <!-- Modal -->
@@ -146,7 +147,7 @@
                       id="staticBackdropLabel2"
                       style="color: black"
                     >
-                      Economic Data
+                      Data Visualizations
                     </h5>
                     <button
                       type="button"
@@ -156,7 +157,8 @@
                     ></button>
                   </div>
                   <div class="modal-body">
-                    <div id="plots"></div>
+                    <div id="bar-graph"></div>
+                    <div id="pie-chart"></div>
                   </div>
                 </div>
               </div>
@@ -232,6 +234,8 @@
     <script src="js/scripts.js"></script>
     <!-- D3 Library -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <!-- Map and Plotly JS files -->
     <script src="js/map.js"></script>
+    <script src="js/Plotly.js"></script>
   </body>
 </html>
