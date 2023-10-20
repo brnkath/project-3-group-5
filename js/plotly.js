@@ -20,18 +20,6 @@ function processData(data) {
   createBarGraph(zipcodes, incomes);
 }
 
-const trace = {
-  x: zipcodes, // X-axis should be Zipcodes
-  y: incomes, // Y-axis should be Median_income
-  type: "bar",
-  marker: {
-    color: "orange", // Set the bar color to Orange
-  },
-};
-
-// Reference: https://plotly.com/python/reference/layout/xaxis/
-// Reference: https://plotly.com/javascript/bar-charts/
-
 function createBarGraph(zipcodes, incomes) {
   const trace = {
     x: zipcodes, // X-axis should be Zipcodes
@@ -60,45 +48,20 @@ function createBarGraph(zipcodes, incomes) {
 
 // Start Pie Chart of Available Food Sources
 
-fetch("resources/cat_breakdown.csv")
-  .then((response) => response.text())
-  .then((data) => {
-    // Split the CSV data into rows
-    const rows = data.split("\n");
+let cat_data = [
+  {
+    values: [233, 88, 14],
+    labels: ["Restaurant", "Fast Food", "Supermarket"],
+    type: "pie",
+  },
+];
 
-    // Extract the header and split it into column names
-    const header = rows[0].split(",");
-    const labelsIndex = header.indexOf("Category");
-    const valuesIndex = header.indexOf("Count");
+let layout = {
+  title: "Available Food Sources",
+  height: 600,
+  width: 700,
+};
 
-    // Initialize arrays to store labels and values
-    const labels = [];
-    const values = [];
-
-    // Iterate through the rows and extract data
-    for (let i = 1; i < rows.length; i++) {
-      const columns = rows[i].split(",");
-      if (columns.length >= valuesIndex + 1) {
-        labels.push(columns[labelsIndex]);
-        values.push(parseInt(columns[valuesIndex], 10));
-      }
-    }
-
-    let trace = {
-      type: "pie",
-      labels: labels,
-      values: values,
-    };
-
-    let layout = {
-      title: "Available Food Sources",
-    };
-
-    let config = {
-      responsive: true,
-    };
-
-    Plotly.newPlot("pie-chart", [trace], layout, config);
-  });
+Plotly.newPlot("pie-chart", cat_data, layout);
 
 // End Pie Chart of Available Food Sources
