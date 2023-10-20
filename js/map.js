@@ -1,6 +1,4 @@
 $(document).ready(function () {
-  // Miami coordinates 25.775080 -80.194702
-  // Set the base layer of the map
   // Wait for the modal to be shown
   $("#staticBackdrop1").on("shown.bs.modal", function () {
     // Create the map inside the modal
@@ -39,11 +37,11 @@ $(document).ready(function () {
           icon: L.divIcon({
             className: "custom-marker",
             html: properties.categories.includes("catering.restaurant")
-              ? '<i class="fas fa-utensils" style="color: #FF0000;"></i>' // Fork and knife icon for restaurant (red color)
+              ? '<i class="fas fa-utensils" style="color: #FF0000;"></i>'
               : properties.categories.includes("catering.fast_food")
-              ? '<i class="fas fa-hamburger" style="color: #0000FF;"></i>' // Hamburger icon for fast food (blue color)
+              ? '<i class="fas fa-hamburger" style="color: #0000FF;"></i>'
               : properties.categories.includes("commercial.supermarket")
-              ? '<i class="fas fa-shopping-cart" style="color: #66b447;"></i>' // Shopping cart icon for supermarket (green color)
+              ? '<i class="fas fa-shopping-cart" style="color: #66b447;"></i>'
               : "", // Empty string if no category matches
           }),
         };
@@ -54,9 +52,9 @@ $(document).ready(function () {
             .bindPopup(
               `<h5>${
                 properties.address_line1
-              }</h5><hr><strong>Address: </strong>${
+              }</h5><hr><h6><strong>Address: </strong>${
                 properties.address_line2
-              }<br><br><strong>Category: </strong>${
+              }</h6><h6><strong>Category: </strong>${
                 properties.categories.includes("catering.restaurant")
                   ? "Restaurant"
                   : properties.categories.includes("catering.fast_food")
@@ -64,7 +62,7 @@ $(document).ready(function () {
                   : properties.categories.includes("commercial.supermarket")
                   ? "Supermarket"
                   : ""
-              }`
+              }</h6>`
             )
             .addTo(restaurantLayer);
         } else if (properties.categories.includes("catering.fast_food")) {
@@ -72,9 +70,9 @@ $(document).ready(function () {
             .bindPopup(
               `<h5>${
                 properties.address_line1
-              }</h5><hr><strong>Address: </strong>${
+              }</h5><hr><h6><strong>Address: </strong>${
                 properties.address_line2
-              }<br><br><strong>Category: </strong>${
+              }</h6><h6><strong>Category: </strong>${
                 properties.categories.includes("catering.restaurant")
                   ? "Restaurant"
                   : properties.categories.includes("catering.fast_food")
@@ -82,7 +80,7 @@ $(document).ready(function () {
                   : properties.categories.includes("commercial.supermarket")
                   ? "Supermarket"
                   : ""
-              }`
+              }</h6>`
             )
             .addTo(fastFoodLayer);
         } else if (properties.categories.includes("commercial.supermarket")) {
@@ -90,9 +88,9 @@ $(document).ready(function () {
             .bindPopup(
               `<h5>${
                 properties.address_line1
-              }</h5><hr><strong>Address: </strong>${
+              }</h5><hr><h6><strong>Address: </strong>${
                 properties.address_line2
-              }<br><br><strong>Category: </strong>${
+              }</h6><h6><strong>Category: </strong>${
                 properties.categories.includes("catering.restaurant")
                   ? "Restaurant"
                   : properties.categories.includes("catering.fast_food")
@@ -100,7 +98,7 @@ $(document).ready(function () {
                   : properties.categories.includes("commercial.supermarket")
                   ? "Supermarket"
                   : ""
-              }`
+              }</h6>`
             )
             .addTo(supermarketLayer);
         }
@@ -112,9 +110,9 @@ $(document).ready(function () {
             marker.bindPopup(
               `<h5>${
                 properties.address_line1
-              }</h5><hr><strong>Address: </strong>${
+              }</h5><hr><h6><strong>Address: </strong>${
                 properties.address_line2
-              }<br><br><strong>Category: </strong>${
+              }</h6><h6><strong>Category: </strong>${
                 properties.categories.includes("catering.restaurant")
                   ? "Restaurant"
                   : properties.categories.includes("catering.fast_food")
@@ -122,7 +120,7 @@ $(document).ready(function () {
                   : properties.categories.includes("commercial.supermarket")
                   ? "Supermarket"
                   : ""
-              }`
+              }</h6>`
             )
           );
         } else if (properties.categories.includes("catering.fast_food")) {
@@ -131,9 +129,9 @@ $(document).ready(function () {
             marker.bindPopup(
               `<h5>${
                 properties.address_line1
-              }</h5><hr><strong>Address: </strong>${
+              }</h5><hr><h6><strong>Address: </strong>${
                 properties.address_line2
-              }<br><br><strong>Category: </strong>${
+              }</h6><h6><strong>Category: </strong>${
                 properties.categories.includes("catering.restaurant")
                   ? "Restaurant"
                   : properties.categories.includes("catering.fast_food")
@@ -141,7 +139,7 @@ $(document).ready(function () {
                   : properties.categories.includes("commercial.supermarket")
                   ? "Supermarket"
                   : ""
-              }`
+              }</h6>`
             )
           );
         } else if (properties.categories.includes("commercial.supermarket")) {
@@ -150,9 +148,9 @@ $(document).ready(function () {
             marker.bindPopup(
               `<h5>${
                 properties.address_line1
-              }</h5><hr><strong>Address: </strong>${
+              }</h5><hr><h6><strong>Address: </strong>${
                 properties.address_line2
-              }<br><br><strong>Category: </strong>${
+              }</h6><h6><strong>Category: </strong>${
                 properties.categories.includes("catering.restaurant")
                   ? "Restaurant"
                   : properties.categories.includes("catering.fast_food")
@@ -160,7 +158,7 @@ $(document).ready(function () {
                   : properties.categories.includes("commercial.supermarket")
                   ? "Supermarket"
                   : ""
-              }`
+              }</h6>`
             )
           );
         }
@@ -179,14 +177,14 @@ $(document).ready(function () {
             .scaleQuantize()
             .domain(incomeRange)
             .range([
-              "#f7f4f9",
-              "#e0ebf2",
-              "#bfd3e6",
-              "#9ebcda",
-              "#8c96c6",
-              "#8c6bb1",
-              "#88419d",
-              "#6e016b",
+              "#3288bd",
+              "#66c2a5",
+              "#abdda4",
+              "#e6f598",
+              "#fee08b",
+              "#fdae61",
+              "#f46d43",
+              "#d53e4f",
             ]);
           let incomeLayer = L.geoJson(geojson, {
             style: function (feature) {
@@ -199,13 +197,13 @@ $(document).ready(function () {
                 fillColor: colorScale(income),
                 weight: 1,
                 opacity: 1,
-                color: "white",
-                fillOpacity: 0.8,
+                color: "black",
+                fillOpacity: 0.5,
               };
             },
             onEachFeature: function (feature, layer) {
               layer.bindPopup(
-                `<strong>Zipcode: </strong> ${feature.properties.ZCTA5CE10}<br><strong>Median Income: </strong> ${feature.properties.median_income}`
+                `<h6><strong>Zipcode: </strong> ${feature.properties.ZCTA5CE10}</h6?<br><h6><strong>Median Income: </strong> ${feature.properties.median_income}</h6>`
               );
             },
           }).addTo(myMap);
@@ -222,93 +220,118 @@ $(document).ready(function () {
           supermarketCluster,
         ]);
 
-        // Add layers to the map with different colors
-        let baseLayers = {
-          "Street Map": streetMap,
+        // Load neighborhood data using D3
+        d3.json("resources/City_Boundary.geojson").then(function (city) {
+          // Create a GeoJSON layer for neighborhoods
+          let miamiLayer = L.geoJson(city, {
+            style: function (feature) {
+              return {
+                weight: 4,
+                opacity: 1,
+                color: "purple",
+                dashArray: "3",
+                fillOpacity: 0,
+              };
+            },
+            // onEachFeature: function (feature, layer) {
+            //   layer.bindPopup(
+            //     `<h6><strong>Neighborhood: </strong> ${feature.properties.LABEL}</h6>`
+            //   );
+            // },
+          });
+
+          // Add layers to the map with different colors
+          let baseLayers = {
+            "Street Map": streetMap,
+          };
+
+          let overlayLayers = {
+            Restaurants: restaurantLayer.addTo(myMap),
+            "Fast Food": fastFoodLayer.addTo(myMap),
+            Supermarkets: supermarketLayer.addTo(myMap),
+            "Income Level": incomeLayer.addTo(myMap),
+            "Restaurants Cluster": restaurantCluster,
+            "Fast Food Cluster": fastFoodCluster,
+            "Supermarkets Cluster": supermarketCluster,
+            "Miami Boundary": miamiLayer,
+          };
+
+          L.control
+            .layers(baseLayers, overlayLayers, {
+              collapsed: false,
+            })
+            .addTo(myMap);
+
+          const legendColors = colorScale.range();
+
+          const incomeLegend = L.control({ position: "bottomright" });
+
+          incomeLegend.onAdd = function (map) {
+            let div = L.DomUtil.create("div", "incomeLegend");
+            div.innerHTML += "<h6>Median Income</h6>";
+            for (let i = 0; i < legendColors.length; i++) {
+              const legendItem = L.DomUtil.create(
+                "div",
+                "incomeLegendItem",
+                div
+              );
+              const lowerBound = colorScale
+                .invertExtent(legendColors[i])[0]
+                .toLocaleString();
+              const upperBound = colorScale
+                .invertExtent(legendColors[i])[1]
+                .toLocaleString();
+              legendItem.innerHTML =
+                `<div class="incomeLegendColor" style="background:${legendColors[i]}"></div>` +
+                `<span class="incomeLegendText">$${lowerBound} - $${upperBound}</span><br>`;
+            }
+            return div;
+          };
+
+          incomeLegend.addTo(myMap);
+        });
+
+        // Define FontAwesome icons and their colors
+        const legendIcons = {
+          "fas fa-utensils": "#FF0000",
+          "fas fa-hamburger": "#0000FF",
+          "fas fa-shopping-cart": "#66b447",
         };
 
-        let overlayLayers = {
-          Restaurants: restaurantLayer.addTo(myMap),
-          "Fast Food": fastFoodLayer.addTo(myMap),
-          Supermarkets: supermarketLayer.addTo(myMap),
-          "All Locations Cluster": allLocationsClusterLayer,
-          "Income Level": incomeLayer.addTo(myMap),
-        };
+        // Function to get layer name by FontAwesome icon class
+        function getLayerNameByIconClass(iconClass) {
+          switch (iconClass) {
+            case "fas fa-utensils":
+              return "Restaurants";
+            case "fas fa-hamburger":
+              return "Fast Food";
+            case "fas fa-shopping-cart":
+              return "Supermarkets";
+            default:
+              return "";
+          }
+        }
 
-        L.control
-          .layers(baseLayers, overlayLayers, {
-            collapsed: false,
-          })
-          .addTo(myMap);
+        // Create a custom legend control
+        const legend = L.control({ position: "bottomright" });
 
-        const legendColors = colorScale.range();
-
-        const incomeLegend = L.control({ position: "bottomright" });
-
-        incomeLegend.onAdd = function (map) {
-          let div = L.DomUtil.create("div", "incomeLegend");
-          div.innerHTML += "<h6>Median Income</h6>";
-          for (let i = 0; i < legendColors.length; i++) {
-            const legendItem = L.DomUtil.create("div", "incomeLegendItem", div);
-            const lowerBound = colorScale
-              .invertExtent(legendColors[i])[0]
-              .toLocaleString();
-            const upperBound = colorScale
-              .invertExtent(legendColors[i])[1]
-              .toLocaleString();
+        legend.onAdd = function (map) {
+          let div = L.DomUtil.create("div", "legend");
+          div.innerHTML += "<h6>Category Icons</h6>";
+          for (const [iconClass, color] of Object.entries(legendIcons)) {
+            const legendItem = L.DomUtil.create("div", "legend-item", div);
             legendItem.innerHTML =
-              `<div class="incomeLegendColor" style="background:${legendColors[i]}"></div>` +
-              `<span class="incomeLegendText">$${lowerBound} - $${upperBound}</span><br>`;
+              `<i class="${iconClass} legend-icon" style="color: ${color};"></i>` +
+              `<span class="legend-text">${getLayerNameByIconClass(
+                iconClass
+              )}</span>`;
           }
           return div;
         };
 
-        incomeLegend.addTo(myMap);
+        // Add the legend control to the map
+        legend.addTo(myMap);
       });
-
-      // Define FontAwesome icons and their colors
-      const legendIcons = {
-        "fas fa-utensils": "#FF0000", // Restaurant icon with red color
-        "fas fa-hamburger": "#0000FF", // Fast food icon with green color
-        "fas fa-shopping-cart": "#66b447", // Supermarket icon with blue color
-      };
-
-      // Function to get layer name by FontAwesome icon class
-      function getLayerNameByIconClass(iconClass) {
-        switch (iconClass) {
-          case "fas fa-utensils":
-            return "Restaurants";
-          case "fas fa-hamburger":
-            return "Fast Food";
-          case "fas fa-shopping-cart":
-            return "Supermarkets";
-          default:
-            return "";
-        }
-      }
-
-      // Create a custom legend control
-      const legend = L.control({ position: "bottomright" });
-
-      legend.onAdd = function (map) {
-        let div = L.DomUtil.create("div", "legend");
-        div.innerHTML += "<h6>Category Icons</h6>";
-        for (const [iconClass, color] of Object.entries(legendIcons)) {
-          const legendItem = L.DomUtil.create("div", "legend-item", div);
-          legendItem.innerHTML =
-            `<i class="${iconClass} legend-icon" style="color: ${color};"></i>` +
-            `<span class="legend-text">${getLayerNameByIconClass(
-              iconClass
-            )}</span>`;
-        }
-        return div;
-      };
-
-      // Add the legend control to the map
-      legend.addTo(myMap);
-
-      // Add the legend control to the map
-      legend.addTo(myMap);
     });
   });
 });

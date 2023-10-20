@@ -55,20 +55,20 @@ html {
 /* Adjust modal styles for Leaflet components */
 #staticBackdrop1 .leaflet-control-layers,
 #staticBackdrop1 .legend {
-  z-index: 1000; /* Ensure Leaflet components are above modal backdrop */
+  z-index: 1000;
 }
 
 /* Override Leaflet styles for legend and layer controls */
 .leaflet-control-layers,
 .leaflet-control-layers-expanded {
-  background-color: white; /* Set background color for layer controls */
-  color: black; /* Set text color for layer controls */
-  text-align: left; /* Align text left within the controls */
+  background-color: white;
+  color: black;
+  text-align: left;
 }
 
 /* Adjust position of checkboxes */
 .leaflet-control-layers-list input[type="checkbox"] {
-  margin-right: 8px; /* Add some space between checkbox and text */
+  margin-right: 8px;
 }
 
 /* CSS for the legend */
@@ -84,40 +84,40 @@ html {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
-  color: black; /* Set text color for legend items */
+  color: black;
 }
 
 .legend-icon {
-  margin-right: 10px; /* Adjust the margin between icon and text */
-  width: 20px; /* Set a fixed width for all icons */
-  text-align: center; /* Center the icon */
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
 }
 
 /* Ensure legend text is visible */
 .legend-text {
   white-space: nowrap;
-  color: black; /* Set text color for legend text */
+  color: black;
 }
 
 /* Ensure legend title is visible */
 .legend h6 {
-  color: black; /* Set text color for legend title */
-  margin-bottom: 10px; /* Add space below the legend title */
+  color: black;
+  margin-bottom: 10px;
 }
 
 /* Add background color and padding to income legend */
 .incomeLegend {
-  background-color: white; /* Set background color */
-  padding: 10px; /* Add padding */
-  text-align: center; /* Center-align text */
-  border: 1px solid black; /* Add border for better separation */
-  color: black; /* Set text color */
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+  color: black;
 }
 
 /* Style the legend title */
 .incomeLegend h6 {
-  color: black; /* Set text color for legend title */
-  margin-bottom: 10px; /* Add space below the legend title */
+  color: black;
+  margin-bottom: 10px;
 }
 
 /* Style legend items */
@@ -129,14 +129,18 @@ html {
 
 /* Style legend colors */
 .incomeLegendColor {
-  width: 20px; /* Set a fixed width for color indicators */
-  height: 20px; /* Set a fixed height for color indicators */
-  margin-right: 10px; /* Adjust the margin between color indicator and text */
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
 
 /* Style legend text */
 .incomeLegendText {
   white-space: nowrap;
+}
+
+#bar-graph {
+  width: 100vw;
 }
 
 #foot {
