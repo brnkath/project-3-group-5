@@ -16,7 +16,7 @@ from flask_sqlalchemy import SQLAlchemy
 #engine = create_engine('sqlite:///miami.sqlite')
                     #connect_args={'check_same_thread': False})
 
-engine = create_engine('postgresql://postrgres:postgres@localhost:5432/miami')
+engine = create_engine('postgresql://postgres:postgres@localhost:5432/miami')
 # reflect an existing database into a new model
 Base = automap_base()
 # reflect the tables
