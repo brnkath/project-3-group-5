@@ -35,8 +35,6 @@ app = Flask(__name__)
 # Flask Routes
 #################################################
 
-app = Flask(__name__)
-
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postres:postres@localhost:5432/miami'
 
 db=SQLAlchemy(app)
