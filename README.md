@@ -55,7 +55,7 @@ The four additional layers that can be seen by clicking the checkboxes in the co
 
 ## Directory of Files
 
- * Folders
+ **Folders**<br/>
   * <a href="https://github.com/brnkath/project-3-group-5/tree/main/css">CSS</a> - CSS files<br/>
   * <a href="https://github.com/brnkath/project-3-group-5/tree/main/img">img</a> - Image files used throughout the project<br/>
   * <a href="https://github.com/brnkath/project-3-group-5/tree/main/js">js</a> - JavaScript files<br/>
