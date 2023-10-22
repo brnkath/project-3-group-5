@@ -39,13 +39,19 @@ The four additional layers that can be seen by clicking the checkboxes in the co
 
 ### Visualizations
 
-<img src="https://github.com/brnkath/project-3-group-5/blob/main/img/miami-dade-zipcode-income-bargraph.png">
-Bar chart of the income spectrum with data from the US Census Bureau, separated out by zip code.
+<table>
+  <tr>
+    <td><img src="https://github.com/brnkath/project-3-group-5/blob/main/img/miami-dade-zipcode-income-bargraph.png"></td>
+    <td>Bar chart of the income spectrum with data from the US Census Bureau, separated out by zip code.</td>
+  </tr>
+</table>
 
-
-<img src="https://github.com/brnkath/project-3-group-5/blob/main/img/avail-food-source-piechart.png" width="50%">
-Pie chart (aka Hunter's Absolute Favorite) showing the food resources available to the selected areas of the City of Miami, as defined by zip code.
-
+<table>
+  <tr>
+    <td><img src="https://github.com/brnkath/project-3-group-5/blob/main/img/avail-food-source-piechart.png" width="50%"></td>
+    <td>Pie chart (aka Hunter's Absolute Favorite) showing the food resources available to the selected areas of the City of Miami, as defined by zip code.</td>
+  </tr>
+</table>
 
 ## Directory of Files
 
