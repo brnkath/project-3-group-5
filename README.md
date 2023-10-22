@@ -28,7 +28,7 @@ We used a ‘drill down’ approach, beginning with the State of Florida, into M
 ## Overview
 
 ### The Map
-<img src="https://github.com/brnkath/project-3-group-5/blob/main/img/webpage-image.png" width="50%">
+<img src="https://github.com/brnkath/project-3-group-5/blob/main/img/webpage-image.png" align="left" width="50%">
 The main thrust of our project’s presentation is our map. 
 
 The map is located within a Bootstrap modal that opens when the “Map of Locations” button from the main page is clicked. The initial view that displays when the map is loaded shows a zoomed-in map of the Miami, Florida area. There is one base layer that uses the street map version from openstreetmap.org. Additionally, there are a total of eight overlay layers. Four layers immediately show when the map loads. These layers include individual layers for each location category from our dataset (Restaurants, Fast Food, and Supermarkets) with customized icons for each location/location category. Each location icon also includes a popup when clicked that shows the name of the location, the address, and the category that the location belongs to. 
