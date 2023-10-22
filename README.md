@@ -55,9 +55,9 @@ The four additional layers that can be seen by clicking the checkboxes in the co
 
 ## Directory of Files
 
-Folders
-<a href="https://github.com/brnkath/project-3-group-5/tree/main/css">CSS</a> - CSS files<br/>
-<a href="https://github.com/brnkath/project-3-group-5/tree/main/img">img</a> - Image files used throughout the project<br/>
-<a href="https://github.com/brnkath/project-3-group-5/tree/main/js">js</a> - JavaScript files<br/>
-<a href="https://github.com/brnkath/project-3-group-5/tree/main/resources">resources</a> - Juypter Notebooks, CSV, JSON, geoJSON files<br/>
-<a href="https://github.com/brnkath/project-3-group-5/tree/main/templates">templates</a> - Flask files<br/>
+ * Folders
+  * <a href="https://github.com/brnkath/project-3-group-5/tree/main/css">CSS</a> - CSS files<br/>
+  * <a href="https://github.com/brnkath/project-3-group-5/tree/main/img">img</a> - Image files used throughout the project<br/>
+  * <a href="https://github.com/brnkath/project-3-group-5/tree/main/js">js</a> - JavaScript files<br/>
+  * <a href="https://github.com/brnkath/project-3-group-5/tree/main/resources">resources</a> - Juypter Notebooks, CSV, JSON, geoJSON files<br/>
+  * <a href="https://github.com/brnkath/project-3-group-5/tree/main/templates">templates</a> - Flask files<br/>
