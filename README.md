@@ -7,7 +7,8 @@
 
 
 ## Introduction:
-<img src="https://github.com/brnkath/project-3-group-5/blob/main/img/miami-1.jpg">
+<img src="https://github.com/brnkath/project-3-group-5/blob/main/img/miami-1.jpg"><br/>
+
 In the vibrant city of Miami, Florida, known for its stunning beaches, diverse culture, and lively atmosphere, a less visible but pressing issue silently affects the lives of many of its residents: food deserts. “Food Desert” is a term used to describe an area where access to fresh, nutritious, and affordable food is severely limited or non-existent. This issue is not unique to Miami, but it is particularly pronounced in Miami-Dade County, where a complex web of socio-economic factors, urban development, and geographic disparities has left a significant portion of its population struggling to find access to the basic necessity of wholesome, nourishing food.<br/>
 
 In this project, we will investigate the concept of food deserts, exploring their definition, their impact on the health and well-being of Miami's communities, and why Miami-Dade County serves as a poignant case study for the challenges associated with food deserts. Through an analysis of available data, we aim to illuminate this critical issue, gaining insight into its underlying causes and consequences, with the ultimate goal of working towards a more equitable and nourished future for all Miami residents.<br/>
@@ -41,7 +42,7 @@ Collaborations between local businesses, nonprofits, and government agencies can
   * SQLite Viewer Web App: https://sqliteviewer.app/ 
 
 ### The Map:
-<img src="https://github.com/brnkath/project-3-group-5/blob/main/img/map_image.png" align="left" width="75%">
+<img src="https://github.com/brnkath/project-3-group-5/blob/main/img/map_image.png" align="left" width="50%">
 
 The main thrust of our project’s presentation is our map. 
 
