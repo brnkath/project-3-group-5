@@ -41,6 +41,15 @@ The fourth layer that shows up when the map loads include the boundaries of the 
 
 The four additional layers that can be seen by clicking the checkboxes in the controls at the upper right corner of the map include individual layers of marker clusters for each location category. These marker cluster layers group up the locations for each category to make it easier to see where the locations for each category are concentrated. The final layer that can be used shows a boundary line of the city of Miami. This layer can make it easier to see how the zip codes specific to Miami differ from the surrounding zip codes regarding median income.
 
+### What Can Be Done:
+<img src="https://github.com/brnkath/project-3-group-5/blob/main/img/miami-striking-for-better-wages.png" width="50%" align="left">Addressing the food desert crisis in Miami, while also tackling income disparity, requires a multi-faceted approach that recognizes the interconnected nature of these issues. 
+
+First and foremost, local and state governments must invest in targeted policies that promote economic equity. This includes raising the minimum wage, providing job training and educational opportunities, and supporting affordable housing initiatives. By addressing income disparities, more residents will have the means to access fresh and nutritious food, reducing the reliance on fast food outlets and convenience stores as primary sources of sustenance.
+
+Simultaneously, community-based initiatives are crucial to improving food access in underserved neighborhoods. Supporting the development of community gardens, urban farms, and farmers' markets in these areas can provide residents with affordable, locally-sourced produce.
+
+Collaborations between local businesses, nonprofits, and government agencies can further enhance access to healthy food options. Education and outreach programs can also play a pivotal role in empowering residents to make healthier dietary choices. By addressing income disparities and implementing community-driven solutions, Miami can work towards mitigating the food desert crisis, improving the overall well-being of its residents, and fostering a more equitable and sustainable future for all.
+
 
 ### Visualizations:
 
