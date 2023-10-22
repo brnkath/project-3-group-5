@@ -24,7 +24,9 @@ Simultaneously, community-based initiatives are crucial to improving food access
 
 Collaborations between local businesses, nonprofits, and government agencies can further enhance access to healthy food options. Education and outreach programs can also play a pivotal role in empowering residents to make healthier dietary choices. By addressing income disparities and implementing community-driven solutions, Miami can work towards mitigating the food desert crisis, improving the overall well-being of its residents, and fostering a more equitable and sustainable future for all.
 
-## Sources & Resources:
+## The Project:
+
+### Sources & Resources:
 
   * United States Census Bureau: https://www.census.gov/
   * Miami Matters - Measuring What Matters in Miami-Dade County: Miami-Dade Matters: https://www.miamidadematters.org/
@@ -32,17 +34,14 @@ Collaborations between local businesses, nonprofits, and government agencies can
   * State-zip-code-GeoJSON courtesy of Git Hub’s <a href="https://github.com/enactdev">enactdev</a> (part of the 
 <a href="https://github.com/OpenDataDE">Open Data Delaware Project</a>): https://github.com/OpenDataDE/State-zip-code-GeoJSON
 
-## Additional Took Kits:
+### Additional Took Kits:
   * Jombotron courtesy of mdbootstrap.com: https://mdbootstrap.com/docs/standard/extended/jumbotron 
   * Hidden API Link div courtesy of jQuery toggle feature: https://www.w3schools.com/jquery/eff_toggle.asp
   * API tab section courtesy of W3schools: https://www.w3schools.com/howto/howto_js_tabs.asp
   * SQLite Viewer Web App: https://sqliteviewer.app/ 
- 
-
-## Overview:
 
 ### The Map:
-<img src="https://github.com/brnkath/project-3-group-5/blob/main/img/map_image.png" align="right" width="75%">
+<img src="https://github.com/brnkath/project-3-group-5/blob/main/img/map_image.png" align="left" width="75%">
 
 The main thrust of our project’s presentation is our map. 
 
@@ -69,7 +68,7 @@ The four additional layers that can be seen by clicking the checkboxes in the co
   </tr>
 </table>
 
-## Directory of Files:
+### Directory of Files:
 
  **Folders:**<br/>
   * <a href="https://github.com/brnkath/project-3-group-5/tree/main/css">CSS</a> - CSS files<br/>
