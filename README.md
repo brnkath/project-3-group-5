@@ -31,7 +31,7 @@ We used a ‘drill down’ approach, beginning with the State of Florida, into M
 ## Overview:
 
 ### The Map:
-<img src="https://github.com/brnkath/project-3-group-5/blob/main/img/map_image.png" align="right" width="50%">
+<img src="https://github.com/brnkath/project-3-group-5/blob/main/img/map_image.png" align="right" width="75%">
 
 The main thrust of our project’s presentation is our map. 
 
