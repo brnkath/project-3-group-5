@@ -25,9 +25,9 @@ We used a ‘drill down’ approach, beginning with the State of Florida, into M
   * SQLite Viewer Web App: https://sqliteviewer.app/ 
   * State-zip-code-GeoJSON courtesy of Git Hub’s enactdev: https://github.com/OpenDataDE/State-zip-code-GeoJSON
 
-## Overview
+## Overview:
 
-### The Map
+### The Map:
 <img src="https://github.com/brnkath/project-3-group-5/blob/main/img/webpage-image.png" align="left" width="50%">
 The main thrust of our project’s presentation is our map. 
 
@@ -37,7 +37,7 @@ The fourth layer that shows up when the map loads include the boundaries of the 
 
 The four additional layers that can be seen by clicking the checkboxes in the controls at the upper right corner of the map include individual layers of marker clusters for each location category. These marker cluster layers group up the locations for each category to make it easier to see where the locations for each category are concentrated. The final layer that can be used shows a boundary line of the city of Miami. This layer can make it easier to see how the zip codes specific to Miami differ from the surrounding zip codes regarding median income.
 
-### Visualizations
+### Visualizations:
 
 <table>
   <tr>
@@ -54,9 +54,9 @@ The four additional layers that can be seen by clicking the checkboxes in the co
   </tr>
 </table>
 
-## Directory of Files
+## Directory of Files:
 
- **Folders**<br/>
+ **Folders:**<br/>
   * <a href="https://github.com/brnkath/project-3-group-5/tree/main/css">CSS</a> - CSS files<br/>
   * <a href="https://github.com/brnkath/project-3-group-5/tree/main/img">img</a> - Image files used throughout the project<br/>
   * <a href="https://github.com/brnkath/project-3-group-5/tree/main/js">js</a> - JavaScript files<br/>
