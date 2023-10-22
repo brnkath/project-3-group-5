@@ -1,8 +1,8 @@
 
 
-**Title:** Mapping Food Insecurity: A Study of Miami's Food Deserts
-**Project 3, Group 5**
-**Contributors:** Alexandra Calametti, Brian Kath, Laura Bishop and Noah McHale 
+**Title:** Mapping Food Insecurity: A Study of Miami's Food Deserts<br/>
+**Project 3, Group 5**<br/>
+**Contributors:** Alexandra Calametti, Brian Kath, Laura Bishop and Noah McHale<br/>
 <!-- PDF of  Presentation found here. (( Linke to HTML? -->
 
 
