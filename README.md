@@ -13,17 +13,20 @@ In this project, we will investigate the concept of food deserts, exploring thei
 
 We used a ‘drill down’ approach, beginning with the State of Florida, into Miami-Dade County, until eventually localizing on the City of Miami.
 
-## Sources:
+## Sources & Resources:
 
   * United States Census Bureau: https://www.census.gov/
-  * Miami Matters - Measuring What Matters in Miami-Dade County: Miami-Dade Matters (miamidadematters.org)
+  * Miami Matters - Measuring What Matters in Miami-Dade County: Miami-Dade Matters: miamidadematters.org
+  * Places API Playground: https://apidocs.geoapify.com/playground/places/
+  * State-zip-code-GeoJSON courtesy of Git Hub’s <a href="https://github.com/enactdev">enactdev</a> (part of the 
+<a href="https://github.com/OpenDataDE">Open Data Delaware Project</a>): https://github.com/OpenDataDE/State-zip-code-GeoJSON
 
 ## Additional Took Kits:
   * Jombotron courtesy of mdbootstrap.com: https://mdbootstrap.com/docs/standard/extended/jumbotron 
   * Hidden API Link div courtesy of jQuery toggle feature: https://www.w3schools.com/jquery/eff_toggle.asp
   * API tab section courtesy of W3schools: https://www.w3schools.com/howto/howto_js_tabs.asp
   * SQLite Viewer Web App: https://sqliteviewer.app/ 
-  * State-zip-code-GeoJSON courtesy of Git Hub’s enactdev: https://github.com/OpenDataDE/State-zip-code-GeoJSON
+ 
 
 ## Overview:
 
