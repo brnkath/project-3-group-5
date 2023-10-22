@@ -17,7 +17,6 @@ We used a ‘drill down’ approach, beginning with the State of Florida, into M
 
   * United States Census Bureau: https://www.census.gov/
   * Miami Matters - Measuring What Matters in Miami-Dade County: Miami-Dade Matters (miamidadematters.org)
-  * How to Convert Nested JSON into a Pandas DataFrame: https://avithekkc.medium.com/how-to-convert-nested-json-into-a-pandas-dataframe-9e8779914a24 
 
 ## Additional Took Kits:
   * Jombotron courtesy of mdbootstrap.com: https://mdbootstrap.com/docs/standard/extended/jumbotron 
