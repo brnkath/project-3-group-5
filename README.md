@@ -16,7 +16,7 @@ We used a ‘drill down’ approach, beginning with the State of Florida, into M
 ## Sources & Resources:
 
   * United States Census Bureau: https://www.census.gov/
-  * Miami Matters - Measuring What Matters in Miami-Dade County: Miami-Dade Matters: miamidadematters.org
+  * Miami Matters - Measuring What Matters in Miami-Dade County: Miami-Dade Matters: (miamidadematters.org)
   * Places API Playground: https://apidocs.geoapify.com/playground/places/
   * State-zip-code-GeoJSON courtesy of Git Hub’s <a href="https://github.com/enactdev">enactdev</a> (part of the 
 <a href="https://github.com/OpenDataDE">Open Data Delaware Project</a>): https://github.com/OpenDataDE/State-zip-code-GeoJSON
