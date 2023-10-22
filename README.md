@@ -30,7 +30,7 @@ Collaborations between local businesses, nonprofits, and government agencies can
 ### Sources & Resources:
 
   * United States Census Bureau: https://www.census.gov/
-  * Miami Matters - Measuring What Matters in Miami-Dade County: Miami-Dade Matters: https://www.miamidadematters.org/
+  * Miami Matters - Measuring What Matters in Miami-Dade County: https://www.miamidadematters.org/
   * Places API Playground: https://apidocs.geoapify.com/playground/places/
   * State-zip-code-GeoJSON courtesy of Git Hub’s <a href="https://github.com/enactdev">enactdev</a> (part of the 
 <a href="https://github.com/OpenDataDE">Open Data Delaware Project</a>): https://github.com/OpenDataDE/State-zip-code-GeoJSON
