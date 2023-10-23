@@ -3,7 +3,7 @@
 **Title:** Mapping Food Insecurity: A Study of Miami's Food Deserts<br/>
 **Project 3, Group 5**<br/>
 **Contributors:** Alexandra Calametti, Brian Kath, Laura Bishop and Noah McHale<br/>
-<!-- PDF of  Presentation found here. (( Linke to HTML? -->
+**Presentation PDF:** https://github.com/brnkath/project-3-group-5/blob/main/resources/project3group5-presentation.pdf
 
 
 ## Introduction:
@@ -51,6 +51,8 @@ The map is located within a Bootstrap modal that opens when the “Map of Locati
 The fourth layer that shows up when the map loads include the boundaries of the zip codes surrounding the city of Miami. Each zip code includes a popup when clicked that lists the specific zip code and the median income within that zip code. The background colors of the zip codes are based on the median income. There are also two legends in the map that show the color range related to the median income of each zip code, and the icons associated with each location category.
 
 The four additional layers that can be seen by clicking the checkboxes in the controls at the upper right corner of the map include individual layers of marker clusters for each location category. These marker cluster layers group up the locations for each category to make it easier to see where the locations for each category are concentrated. The final layer that can be used shows a boundary line of the city of Miami. This layer can make it easier to see how the zip codes specific to Miami differ from the surrounding zip codes regarding median income.
+
+You can find the map [here](https://brnkath.github.io/project-3-group-5/).
 
 ### Visualizations:
 
